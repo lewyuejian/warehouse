@@ -11,13 +11,13 @@
 @desc:
 '''
 import socket
-def main(data):
+def main(data,IP):
     udp_socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-    udp_socket.sendto(data,("39.108.197.42",6688))
+    udp_socket.sendto(data,(IP,6688))
     udp_socket.close()
 
 if __name__ == '__main__':
+
     hus = "2929800028C13D990B190425165122022320041140156000000000F80000007E7C0000001E0000000000005E0D"
     data = bytes().fromhex(hus)
-    main(data)
-        
+    main(data,'120.0.0.1')
