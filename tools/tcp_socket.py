@@ -13,7 +13,7 @@
 import socket
 def main(data):
     udp_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    udp_socket.connect(('39.108.197.42', 7788))
+    udp_socket.connect(('120.0.0.1', 7788))
     udp_socket.send(bytes().fromhex(data))
     udp_socket.close()
 
